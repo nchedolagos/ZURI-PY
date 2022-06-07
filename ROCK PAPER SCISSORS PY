@@ -1,0 +1,50 @@
+import random
+while True:
+    moves = ["R", "P", "S"]
+    CPU =  random.choice(moves)
+   
+    Player = input("Pick an option from (R, P, S): ")
+    if Player == CPU:
+        print("It's a tie")
+    elif Player == ("R"):
+        if CPU == ("P"):
+            print("You Lose!")
+        else:
+            print("You Win!")
+            break
+    elif Player == ("P"):
+        if CPU == ("R"):
+            print("You Win!")
+        else:
+            print("You Lose!")
+            break
+    elif Player == ("S"):
+        if CPU == ("R"):
+            print("You Lose!")
+        else:
+            print("You Win!")
+            break
+    elif Player == ("S"):
+        if CPU == ("P"):
+            print("You Win!")
+        else:
+            print("You Lose!")
+            break
+    elif Player == ("P"):
+        if CPU == ("S"):
+            print("You Lose!")
+        else:
+            print("You Win!")
+            break
+    elif Player == ("R"):
+        if CPU == ("S"):
+            print("You Win!")
+        else:
+            print("You Lose!")
+            break 
+    else:
+        print("Invalid input...Pick from R, S, P")
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        break
+
